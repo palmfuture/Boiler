@@ -22,7 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('username')->unique();
             $table->string('email')->unique();
+            $table->string('tel')->unique();
             $table->string('password')->nullable();
+            $table->string('facebook')->unique();
+            $table->double('latitude', 18, 5)->nullable();
+            $table->double('longitude', 18, 5)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
